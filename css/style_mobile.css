@@ -430,6 +430,7 @@ hr {
 
 .attribution {
   color: var(--black);
+  background-color: var(--pale-orange);
   padding: 5px;
   font-size: 11px;
   text-align: center;
