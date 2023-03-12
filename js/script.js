@@ -212,8 +212,12 @@ window.onload = () => {
   function menuResponsivo() {
     menu[0].classList.add("responsivo");
     fundoPretoMenu[0].style.display = "block";
-
-    fundoPretoMenu[0].removeEventListener("animationend", finalizaAnimFundoPreto);
+    
+    if (document.removeEventListener) {
+      fundoPretoMenu[0].removeEventListener("animationend", finalizaAnimFundoPreto);
+    } else {
+      fundoPretoMenu[0].detachEvent("onanimationend", finalizaAnimFundoPreto); 
+    }
     fundoPretoMenu[0].style.animationName = "aberturaLenta";
   }
 
@@ -221,7 +225,12 @@ window.onload = () => {
     menu[0].style.width = "0";
     menu[0].classList.remove("responsivo");
     fundoPretoMenu[0].style.animationName = "fechamentoLenta";
-    fundoPretoMenu[0].addEventListener("animationend", finalizaAnimFundoPreto);
+    
+    if (document.addEventListener) {
+      fundoPretoMenu[0].addEventListener("animationend", finalizaAnimFundoPreto);
+    } else {
+      fundoPretoMenu[0].attachEvent("onanimationend", finalizaAnimFundoPreto); 
+    }
   }
 
   /* --- Alternativa de fallback para suporte ao addEventListener --- */
