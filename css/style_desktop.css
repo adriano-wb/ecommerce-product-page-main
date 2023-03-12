@@ -582,8 +582,12 @@ hr {
 }
 
 .attribution {
+  color: var(--black);
+  padding: 5px;
   font-size: 11px;
   text-align: center;
   margin-top: 150px;
 }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a {
+  color: var(--orange);
+}
