@@ -215,6 +215,7 @@ window.onload = () => {
 
     fundoPretoMenu[0].removeEventListener("animationend", finalizaAnimFundoPreto);
     fundoPretoMenu[0].style.animationName = "aberturaLenta";
+    cartDropdownContainer.classList.remove("cart-dropdown-alterne");
   }
 
   function fecharMenuResponsivo() {
