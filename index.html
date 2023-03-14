@@ -9,8 +9,9 @@
     <script src="js/script.js"></script>
   </head>
   <body>
+    <h1 class="desktop-none mobile-none">E-commerce product page</h1>
     <main class="content">
-      <!-- Menu -->
+      <!-- MENU PRINCIPAL -->
       <nav class="menu">
         <a href="#" class="menu-btn" id="btnMenu"><img src="images/icon-menu.svg" class="menu-btn__img" alt="Botão para abrir menu de navegação"></a>
         <div class="menu-logo">
@@ -76,10 +77,13 @@
           </a>
         </div>
       </nav>
-      <article class="modify">
+      <!-- FIM MENU PRINCIPAL -->
+      
+      <div class="modify">
         <div class="item-01">
           <aside>
-            <article class="slideshow">
+            <!-- SLIDESHOW CONTENDO IMAGENS DO PRODUTO -->
+            <div class="slideshow">
               <img src="images/image-product-1.jpg" class="slideshow__img" alt="Foto 1 do produto tênis">
               <img src="images/image-product-2.jpg" class="slideshow__img" alt="Foto 2 do produto tênis">
               <img src="images/image-product-3.jpg" class="slideshow__img" alt="Foto 3 do produto tênis">
@@ -90,7 +94,9 @@
               <span class="btn-next desktop-none" id="nextSldMobile">
                 <img src="images/icon-next.svg" alt="Botão para avançar slide" class="btn-next__icon">
               </span>
-            </article>
+            </div>
+            
+            <!-- BOTÕES PARA ACESSAR PONTOS DO SLIDE -->
             <div class="dots-slides mobile-none">
               <button type="button" class="dot active">
                 <img src="images/image-product-1-thumbnail.jpg" class="dot__img" alt="Imagem para selecionar primeiro slide">
@@ -108,7 +114,7 @@
           </aside>
         </div>
 
-
+        <!-- INFORMAÇÕES DO PRODUTO COMO TÍTULO, DESCRIÇÃO ETC. -->
         <section class="item-02 info-product">
           <h2 class="info-title">
             <small class="info-title__thin">Sneaker Company</small><br>
@@ -118,52 +124,70 @@
           <p class="info-product__text">These low-profile sneakers are your perfect casual wear companion. Featuring a
           durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
 
-          <article class="product-price">
+          <div class="product-price">
             <b class="product-price__current">$125.00</b>
             <span class="product-price__descont">50%</span><br>
             <small class="product-price__before">
               <del>$250,00</del>
             </small>
-          </article>
-
-          <article class="add-to-cart">
+          </div>
+          
+          <!-- SEÇÃO PARA ADICIONAR QUANTIDADE DE PRODUTO QUE IRÁ PARA O CARRINHO E BOTÃO DE ADICIONAR AO CARRINHO -->
+          <div class="add-to-cart">
             <div class="quantity">
+              
+              <!-- BOTÃO PARA DIMINUIR QUANTIDADE DE PRODUTO NO CARRINHO -->
               <button type="button" class="quantity__minus" id="diminuir" aria-label="Botão para abaixar quantidade de produto">
                 <img src="images/icon-minus.svg" alt="Diminuir quantidade de items que você quer">
               </button>
-              <span id="itemQnt" class="quantity__value">1</span>
+              
+              <span id="itemQnt" class="quantity__value">1</span> <!-- EXIBÍR QUANTOS IRÃO PRO CARRINHO -->
+              
+              <!-- BOTÃO PARA AUMENTAR QUANTIDADE DE PRODUTO NO CARRINHO -->
               <button type="button" class="quantity__plus" id="aumentar" aria-label="Botão para aumentar quantidade de produto">
                 <img src="images/icon-plus.svg" alt="Diminuir quantidade de items que você quer">
               </button>
             </div>
-
+            
+            <!-- BOTÃO PARA ADICIONAR O PRODUTO AO CARRINHO -->
             <button type="button" class="add-button" id="addToCart">
-              <img src="images/icon-cart.svg" class="add-button__img" alt="Add to cart">
+              <img src="images/icon-cart.svg" class="add-button__img" alt="Adicionar produto ao carrinho de compras">
               <span class="add-button__text">Add to cart</span>
             </button>
-          </article>
+          </div>
         </section>
 
-        <article class="modal-slides mobile-none" aria-hidden="true">
-          <div class="modal-slides__bg-dark" id="bgModal"></div>
+        <!-- SEÇÃO COM O MODAL QUE EXIBE UM OUTRO SLIDE -->
+        <div class="modal-slides mobile-none" aria-hidden="true">
+          <div class="modal-slides__bg-dark" id="bgModal"></div> <!-- FUNDO ESCURO TRANSPARENTE DO MODAL -->
           <div class="slide-modal">
+            
+            <!-- APARECE O BOTÃO DE X PARA FECHAR O MODAL -->
             <div class="head-close-modal">
               <button type="button" class="head-close-btn" aria-label="Fechar modal" id="closeModal">
                 <img src="images/icon-close.svg" class="head-close-btn__icon" alt="Botão de fechar modal">
               </button>
             </div>
-            <article class="slideshow-modal">
+            
+            <!-- IMAGENS DO SLIDESHOW -->
+            <div class="slideshow-modal">
               <img src="images/image-product-1.jpg" class="slideshow-modal__img" alt="Foto 1 do produto tênis">
               <img src="images/image-product-2.jpg" class="slideshow-modal__img" alt="Foto 2 do produto tênis">
               <img src="images/image-product-3.jpg" class="slideshow-modal__img" alt="Foto 3 do produto tênis">
               <img src="images/image-product-4.jpg" class="slideshow-modal__img" alt="Foto 4 do produto tênis">
+              
+              <!-- BOTÃO PARA VOLTAR UM SLIDE -->
               <span class="btn-prev" id="prevSld">
                 <img src="images/icon-previous.svg" alt="Botão para retroceder slide" class="btn-prev__icon">
               </span>
+              
+              <!-- BOTÃO PARA AVANÇAR UM SLIDE -->
               <span class="btn-next" id="nextSld">
                 <img src="images/icon-next.svg" alt="Botão para avançar slide" class="btn-next__icon">
               </span>
-            </article>
+            </div>
+            
+            <!-- BOTÕES PARA ACESSAR PONTOS DO SLIDE -->
             <div class="dots-modal-slides mobile-none">
               <button type="button" class="modal-dot active">
                 <img src="images/image-product-1-thumbnail.jpg" class="modal-dot__img" alt="Imagem para selecionar primeiro slide">
@@ -179,8 +203,9 @@
               </button>
             </div>
           </div>
-        </article>
-      </article>
+          <!-- FIM MODAL -->
+        </div>
+      </div>
     </main>
     <footer class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
