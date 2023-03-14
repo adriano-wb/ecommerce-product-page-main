@@ -17,6 +17,10 @@ hr {
   display: none;
 }
 
+.box-conteudo-flex {
+  display: flex;
+}
+
 /* MENU RESPONSIVO */
 .menu {
   position: relative;
@@ -250,6 +254,7 @@ hr {
 /* Slideshow */
 .slideshow {
   position: relative;
+  order: -1;
 }
 
 .slideshow__img {
