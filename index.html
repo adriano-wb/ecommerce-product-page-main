@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <main class="content">
+      <!-- MENU PRINCIPAL -->
+      <nav class="menu">
+        <a href="#" class="menu-btn" id="btnMenu"><img src="images/icon-menu.svg" class="menu-btn__img" alt="Botão para abrir menu de navegação"></a>
+        <div class="menu-logo">
+          <a href="#">
+            <img src="images/logo.svg" class="menu-logo__img" alt="logo sneakers">
+          </a>
+        </div>
+        <div class="fundo-preto-menu desktop-none" id="fundoPretoMenu" aria-hidden="true"></div>
+        <ul class="menu-list">
+          <li class="menu-list-item desktop-none">
+            <a href="#"><img src="images/icon-close.svg" class="menu-fechar-icon" alt="logo sneakers"></a>
+          </li>
+          <li class="menu-list-item">
+            <a href="#" class="menu-list-item__link">Collections</a>
+          </li>
+          <li class="menu-list-item">
+            <a href="#" class="menu-list-item__link">Men</a>
+          </li>
+          <li class="menu-list-item">
+            <a href="#" class="menu-list-item__link">Women</a>
+          </li>
+          <li class="menu-list-item">
+            <a href="#" class="menu-list-item__link">About</a>
+          </li>
+          <li class="menu-list-item">
+            <a href="#" class="menu-list-item__link">Contact</a>
+          </li>
+        </ul>
+        <div class="menu__aside">
+          <a href="#" role="button" id="btnDropdownCart" class="menu-cart">
+            <img src="images/icon-cart.svg" class="menu-cart__icon" alt="Link para acessar o carrinho de compras">
+            <span class="menu-cart__qnt" id="cartQnt">3</span>
+          </a>
+          <div class="cart-dropdown">
+            <h3 class="cart-dropdown__title">Cart</h3>
+            <hr>
+            <div class="c-msg-cart-empty" id="msgVazio">
+              <p class="c-msg-cart-empty__text">Your cart is empty.</p>
+            </div>
+            <div class="cart-dropdown-product">
+              <img src="images/image-product-1-thumbnail.jpg" class="cart-dropdown-product__img" alt="Foto contendo o produto, tênis, calçado.">
+              <div class="cart-dropdown-caption">
+                <h2 class="cart-dropdown-caption__title">Fall Limited Edition Sneakers</h2>
+                <p class="cart-dropdown-price">
+                  <span>$125.00</span>
+                  <strong class="cart-dropdown-price__total" id="totalPrice">
+                    $125.00
+                  </strong>
+                </p>
+              </div>
+              <div class="cart-dropdown-trash">
+                <img src="images/icon-delete.svg" class="cart-dropdown-trash__icon" alt="Botão para excluír do carrinho de compras" role="button">
+              </div>
+            </div>
+            <div class="cart-dropdown-check">
+              <button class="cart-dropdown__button" id="btnCheckout">
+                Checkout
+              </button>
+            </div>
+          </div>
+          <a href="#" class="menu-perfil">
+            <img src="images/image-avatar.png" class="menu-profile__photo" alt="Link para acessar o perfil do comprador, configurações de conta etc.">
+          </a>
+        </div>
+      </nav>
+      <!-- FIM MENU PRINCIPAL -->
+
+      <div class="box-conteudo-flex">
+        <!-- INFORMAÇÕES DO PRODUTO COMO TÍTULO, DESCRIÇÃO ETC. -->
+        <section class="item-01 info-product">
+          <h1 class="info-title">
+            <small class="info-title__thin">Sneaker Company</small><br>
+            Fall Limited Edition Sneakers
+          </h1>
+
+          <p class="info-product__text">These low-profile sneakers are your perfect casual wear companion. Featuring a
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+
+          <div class="product-price">
+            <b class="product-price__current">$125.00</b>
+            <span class="product-price__descont">50%</span><br>
+            <small class="product-price__before">
+              <del>$250,00</del>
+            </small>
+          </div>
+
+          <!-- SEÇÃO PARA ADICIONAR QUANTIDADE DE PRODUTO QUE IRÁ PARA O CARRINHO E BOTÃO DE ADICIONAR AO CARRINHO -->
+          <div class="add-to-cart">
+            <div class="quantity">
+
+              <!-- BOTÃO PARA DIMINUIR QUANTIDADE DE PRODUTO NO CARRINHO -->
+              <button type="button" class="quantity__minus" id="diminuir" aria-label="Botão para abaixar quantidade de produto">
+                <img src="images/icon-minus.svg" alt="Diminuir quantidade de items que você quer">
+              </button>
+
+              <span id="itemQnt" class="quantity__value">1</span> <!-- EXIBÍR QUANTOS IRÃO PRO CARRINHO -->
+
+              <!-- BOTÃO PARA AUMENTAR QUANTIDADE DE PRODUTO NO CARRINHO -->
+              <button type="button" class="quantity__plus" id="aumentar" aria-label="Botão para aumentar quantidade de produto">
+                <img src="images/icon-plus.svg" alt="Diminuir quantidade de items que você quer">
+              </button>
+            </div>
+
+            <!-- BOTÃO PARA ADICIONAR O PRODUTO AO CARRINHO -->
+            <button type="button" class="add-button" id="addToCart">
+              <img src="images/icon-cart.svg" class="add-button__img" alt="Adicionar produto ao carrinho de compras">
+              <span class="add-button__text">Add to cart</span>
+            </button>
+          </div>
+        </section>
+
+        <aside class="item-02">
+          <!-- SLIDESHOW CONTENDO IMAGENS DO PRODUTO -->
+          <div class="slideshow">
+            <img src="images/image-product-1.jpg" class="slideshow__img" alt="Foto 1 do produto tênis">
+            <img src="images/image-product-2.jpg" class="slideshow__img" alt="Foto 2 do produto tênis">
+            <img src="images/image-product-3.jpg" class="slideshow__img" alt="Foto 3 do produto tênis">
+            <img src="images/image-product-4.jpg" class="slideshow__img" alt="Foto 4 do produto tênis">
+            <span class="btn-prev desktop-none" id="prevSldMobile">
+              <img src="images/icon-previous.svg" alt="Botão para retroceder slide" class="btn-prev__icon">
+            </span>
+            <span class="btn-next desktop-none" id="nextSldMobile">
+              <img src="images/icon-next.svg" alt="Botão para avançar slide" class="btn-next__icon">
+            </span>
+          </div>
+
+          <!-- BOTÕES PARA ACESSAR PONTOS DO SLIDE -->
+          <div class="dots-slides mobile-none">
+            <button type="button" class="dot active">
+              <img src="images/image-product-1-thumbnail.jpg" class="dot__img" alt="Imagem para selecionar primeiro slide">
+            </button>
+            <button type="button" class="dot">
+              <img src="images/image-product-2-thumbnail.jpg" class="dot__img" alt="Imagem para selecionar segundo slide">
+            </button>
+            <button type="button" class="dot">
+              <img src="images/image-product-3-thumbnail.jpg" class="dot__img" alt="Imagem para selecionar terceiro slide">
+            </button>
+            <button type="button" class="dot">
+              <img src="images/image-product-4-thumbnail.jpg" class="dot__img" alt="Imagem para selecionar quarto slide">
+            </button>
+          </div>
+        </aside>
+
+        <!-- SEÇÃO COM O MODAL QUE EXIBE UM OUTRO SLIDE -->
+        <div class="modal-slides mobile-none" aria-hidden="true">
+          <div class="modal-slides__bg-dark" id="bgModal"></div> <!-- FUNDO ESCURO TRANSPARENTE DO MODAL -->
+          <div class="slide-modal">
+
+            <!-- APARECE O BOTÃO DE X PARA FECHAR O MODAL -->
+            <div class="head-close-modal">
+              <button type="button" class="head-close-btn" aria-label="Fechar modal" id="closeModal">
+                <img src="images/icon-close.svg" class="head-close-btn__icon" alt="Botão de fechar modal">
+              </button>
+            </div>
+
+            <!-- IMAGENS DO SLIDESHOW -->
+            <div class="slideshow-modal">
+              <img src="images/image-product-1.jpg" class="slideshow-modal__img" alt="Foto 1 do produto tênis">
+              <img src="images/image-product-2.jpg" class="slideshow-modal__img" alt="Foto 2 do produto tênis">
+              <img src="images/image-product-3.jpg" class="slideshow-modal__img" alt="Foto 3 do produto tênis">
+              <img src="images/image-product-4.jpg" class="slideshow-modal__img" alt="Foto 4 do produto tênis">
+
+              <!-- BOTÃO PARA VOLTAR UM SLIDE -->
+              <span class="btn-prev" id="prevSld">
+                <img src="images/icon-previous.svg" alt="Botão para retroceder slide" class="btn-prev__icon">
+              </span>
+
+              <!-- BOTÃO PARA AVANÇAR UM SLIDE -->
+              <span class="btn-next" id="nextSld">
+                <img src="images/icon-next.svg" alt="Botão para avançar slide" class="btn-next__icon">
+              </span>
+            </div>
+
+            <!-- BOTÕES PARA ACESSAR PONTOS DO SLIDE -->
+            <div class="dots-modal-slides mobile-none">
+              <button type="button" class="modal-dot active">
+                <img src="images/image-product-1-thumbnail.jpg" class="modal-dot__img" alt="Imagem para selecionar primeiro slide">
+              </button>
+              <button type="button" class="modal-dot">
+                <img src="images/image-product-2-thumbnail.jpg" class="modal-dot__img" alt="Imagem para selecionar segundo slide">
+              </button>
+              <button type="button" class="modal-dot">
+                <img src="images/image-product-3-thumbnail.jpg" class="modal-dot__img" alt="Imagem para selecionar terceiro slide">
+              </button>
+              <button type="button" class="modal-dot">
+                <img src="images/image-product-4-thumbnail.jpg" class="modal-dot__img" alt="Imagem para selecionar quarto slide">
+              </button>
+            </div>
+          </div>
+          <!-- FIM MODAL -->
+        </div>
+      </div>
+    </main>
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </footer>
+  </body>
+</html>
