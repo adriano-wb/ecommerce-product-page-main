@@ -93,6 +93,7 @@ window.onload = () => {
   const btnMenu = document.getElementById("btnMenu");
   const btnFecharMenu = document.getElementsByClassName("menu-fechar-icon")
   const fundoPretoMenu = document.getElementsByClassName("fundo-preto-menu");
+  const linkAnimacaoOpacity = document.querySelectorAll(".menu-list-item__link");
 
   // Media query para atribuir efeitos apenas para Mobile
   const mediaMobile = window.matchMedia("(min-width: 375px)").matches;
@@ -221,11 +222,34 @@ window.onload = () => {
   /* -------------------------- MENU PRINCIPAL --------------------------- */
   function finalizaAnimFundoPreto() {
     fundoPretoMenu[0].style.display = "none";
+    for (let i = 0; i < linkAnimacaoOpacity.length; i++) {
+      linkAnimacaoOpacity[i].classList.remove("menu-list-opacity-on");
+      linkAnimacaoOpacity[i].classList.remove("menu-list-opacity-off");
+    }
+
+    menu[0].removeEventListener("transitionend", opacityOn);
+  }
+
+  function opacityOn() {
+    for (let i = 0; i < linkAnimacaoOpacity.length; i++) {
+      linkAnimacaoOpacity[i].classList.remove("menu-list-opacity-on");
+      linkAnimacaoOpacity[i].classList.add("menu-list-opacity-off");
+    }
+  }
+
+  function opacityOff() {
+    for (let i = 0; i < linkAnimacaoOpacity.length; i++) {
+      linkAnimacaoOpacity[i].classList.add("menu-list-opacity-on");
+      linkAnimacaoOpacity[i].classList.remove("menu-list-opacity-off");
+    }
   }
 
   function menuResponsivo() {
+
     menu[0].classList.add("responsivo");
     fundoPretoMenu[0].style.display = "block";
+
+    setTimeout(opacityOn, 200);
 
     fundoPretoMenu[0].removeEventListener("animationend", finalizaAnimFundoPreto);
     fundoPretoMenu[0].style.animationName = "aberturaLenta";
@@ -234,6 +258,13 @@ window.onload = () => {
   function fecharMenuResponsivo() {
     menu[0].style.width = "0";
     menu[0].classList.remove("responsivo");
+    setTimeout(opacityOff, 700);
+
+    for (let i = 0; i < linkAnimacaoOpacity.length; i++) {
+      linkAnimacaoOpacity[i].classList.add("menu-list-opacity-on");
+        linkAnimacaoOpacity[i].classList.remove("menu-list-opacity-off");
+    }
+
     fundoPretoMenu[0].style.animationName = "fechamentoLenta";
     fundoPretoMenu[0].addEventListener("animationend", finalizaAnimFundoPreto);
   }
@@ -311,6 +342,20 @@ window.onload = () => {
       // Exibe a quantidade de produtos escolhida
       quantidadeEscolhidaResult.firstChild.nodeValue = valorAdicionadoAoCarrinho;
     });
+
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        if (valorAdicionadoAoCarrinho > 0) {
+          valorAdicionadoAoCarrinho--;
+        }
+      }
+    })
+
+    quantiaIncrementa.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        valorAdicionadoAoCarrinho++;
+      }
+    })
 
     /* Evento para excluír produto do carrinho de compras */
     excluirProdutoCarrinho.addEventListener("click", () => {
