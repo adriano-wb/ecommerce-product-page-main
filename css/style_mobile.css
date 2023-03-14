@@ -152,7 +152,7 @@ hr {
   height: 256px;
   top: 75px;
   width: 96.5%;
-  z-index: 500;
+  z-index: 1000;
 }
 
 .cart-dropdown-alterne {
@@ -390,6 +390,11 @@ hr {
   padding: 0 25px;
 }
 
+.quantity__minus,
+.quantity__plus {
+  background-color: transparent;
+}
+
 .quantity__value {
   font-size: 0.88rem;
   font-weight: bold;
@@ -429,14 +434,8 @@ hr {
 
 
 .attribution {
-  color: var(--black);
-  background-color: var(--pale-orange);
-  padding: 5px;
   font-size: 11px;
   text-align: center;
   margin-top: 50px;
 }
-
-.attribution a {
-  color: var(--orange);
-}
+.attribution a { color: hsl(228, 45%, 44%); }
