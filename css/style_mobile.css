@@ -19,6 +19,7 @@ hr {
 
 .box-conteudo-flex {
   display: flex;
+  flex-direction: column;
 }
 
 /* MENU RESPONSIVO */
@@ -312,6 +313,7 @@ hr {
 /* ------------------------------------- Informações do produto ------------------------------- */
 .info-product {
   padding: 0 24px;
+  order: 1;
 }
 
 .info-title {
