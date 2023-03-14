@@ -53,7 +53,7 @@
             <div class="cart-dropdown-product">
               <img src="images/image-product-1-thumbnail.jpg" class="cart-dropdown-product__img" alt="Foto contendo o produto, tênis, calçado.">
               <div class="cart-dropdown-caption">
-                <h4 class="cart-dropdown-caption__title">Fall Limited Edition Sneakers</h4>
+                <h1 class="cart-dropdown-caption__title">Fall Limited Edition Sneakers</h1>
                 <p class="cart-dropdown-price">
                   <span>$125.00</span>
                   <strong class="cart-dropdown-price__total" id="totalPrice">
@@ -76,10 +76,10 @@
           </a>
         </div>
       </nav>
-      <section class="modify">
+      <article class="modify">
         <div class="item-01">
           <aside>
-            <section class="slideshow">
+            <article class="slideshow">
               <img src="images/image-product-1.jpg" class="slideshow__img" alt="Foto 1 do produto tênis">
               <img src="images/image-product-2.jpg" class="slideshow__img" alt="Foto 2 do produto tênis">
               <img src="images/image-product-3.jpg" class="slideshow__img" alt="Foto 3 do produto tênis">
@@ -90,7 +90,7 @@
               <span class="btn-next desktop-none" id="nextSldMobile">
                 <img src="images/icon-next.svg" alt="Botão para avançar slide" class="btn-next__icon">
               </span>
-            </section>
+            </article>
             <div class="dots-slides mobile-none">
               <button type="button" class="dot active">
                 <img src="images/image-product-1-thumbnail.jpg" class="dot__img" alt="Imagem para selecionar primeiro slide">
@@ -110,37 +110,41 @@
 
 
         <section class="item-02 info-product">
-          <h1 class="info-title">
+          <h2 class="info-title">
             <small class="info-title__thin">Sneaker Company</small><br>
             Fall Limited Edition Sneakers
-          </h1>
+          </h2>
 
           <p class="info-product__text">These low-profile sneakers are your perfect casual wear companion. Featuring a
           durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
 
-          <section class="product-price">
+          <article class="product-price">
             <b class="product-price__current">$125.00</b>
             <span class="product-price__descont">50%</span><br>
             <small class="product-price__before">
               <del>$250,00</del>
             </small>
-          </section>
+          </article>
 
-          <section class="add-to-cart">
+          <article class="add-to-cart">
             <div class="quantity">
-              <img src="images/icon-minus.svg" class="quantity__minus" role="button" id="diminuir" alt="Diminuir quantidade de items que você quer" aria-label="Botão para abaixar quantidade de produto">
+              <button type="button" class="quantity__minus" id="diminuir" aria-label="Botão para abaixar quantidade de produto">
+                <img src="images/icon-minus.svg" alt="Diminuir quantidade de items que você quer">
+              </button>
               <span id="itemQnt" class="quantity__value">1</span>
-              <img src="images/icon-plus.svg" class="quantity__plus" role="button" id="aumentar" alt="Diminuir quantidade de items que você quer" aria-label="Botão para aumentar quantidade de produto">
+              <button type="button" class="quantity__plus" id="aumentar" aria-label="Botão para aumentar quantidade de produto">
+                <img src="images/icon-plus.svg" alt="Diminuir quantidade de items que você quer">
+              </button>
             </div>
 
             <button type="button" class="add-button" id="addToCart">
-              <img src="images/icon-cart.svg" class="add-button__img" alt="Ícone do carrinho, adicione o produto clicando sobre">
+              <img src="images/icon-cart.svg" class="add-button__img" alt="Add to cart">
               <span class="add-button__text">Add to cart</span>
             </button>
-          </section>
+          </article>
         </section>
 
-        <div class="modal-slides mobile-none" aria-hidden="true">
+        <article class="modal-slides mobile-none" aria-hidden="true">
           <div class="modal-slides__bg-dark" id="bgModal"></div>
           <div class="slide-modal">
             <div class="head-close-modal">
@@ -148,7 +152,7 @@
                 <img src="images/icon-close.svg" class="head-close-btn__icon" alt="Botão de fechar modal">
               </button>
             </div>
-            <section class="slideshow-modal">
+            <article class="slideshow-modal">
               <img src="images/image-product-1.jpg" class="slideshow-modal__img" alt="Foto 1 do produto tênis">
               <img src="images/image-product-2.jpg" class="slideshow-modal__img" alt="Foto 2 do produto tênis">
               <img src="images/image-product-3.jpg" class="slideshow-modal__img" alt="Foto 3 do produto tênis">
@@ -159,7 +163,7 @@
               <span class="btn-next" id="nextSld">
                 <img src="images/icon-next.svg" alt="Botão para avançar slide" class="btn-next__icon">
               </span>
-            </section>
+            </article>
             <div class="dots-modal-slides mobile-none">
               <button type="button" class="modal-dot active">
                 <img src="images/image-product-1-thumbnail.jpg" class="modal-dot__img" alt="Imagem para selecionar primeiro slide">
@@ -175,12 +179,12 @@
               </button>
             </div>
           </div>
-        </div>
-      </section>
-      <footer class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Adriano</a>.
-      </footer>
+        </article>
+      </article>
     </main>
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </footer>
   </body>
 </html>
