@@ -2,7 +2,6 @@
 @import url("variables.css");
 
 body {
-  background: url("../design/desktop-design.jpg") center top / 100% auto no-repeat;
   font-family: var(--font-kumbh);
   height: 100vh;
 }
