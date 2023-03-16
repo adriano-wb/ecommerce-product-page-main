@@ -3,6 +3,7 @@
 
 body {
   background-color: var(--white);
+  /* background: url("../design/desktop-design.jpg") center top / 100% auto no-repeat; */
   font-family: var(--font-kumbh);
   height: 100vh;
 }
@@ -16,12 +17,17 @@ hr {
 
 .box-conteudo-flex {
   display: flex;
+  align-items: center;
+  height: 100vh;
+  position: absolute;
+  top: 0;
 }
 
 .content {
   background-color: var(--white);
   margin: 0 auto;
-  width: 955px;
+  width: 944px;
+  position: relative;
 }
 
 .item-01, .item-02 {
@@ -42,6 +48,8 @@ hr {
   border-bottom: 1px solid #CCC5;
   display: flex;
   height: 96px;
+  position: relative;
+  z-index: 1000;
 }
 
 .menu-btn {
@@ -247,7 +255,7 @@ hr {
 /* ----------------------------------- SLIDESHOW -------------------------------- */
 /* ----------------------------------- SLIDESHOW -------------------------------- */
 .slideshow {
-  padding: 79px 54px;
+  padding: 0 54px;
   padding-left: 41px;
   padding-bottom: 27px;
 }
@@ -452,7 +460,7 @@ hr {
 /* ------------------------------------- Informações do produto ------------------------------- */
 /* ------------------------------------- Informações do produto ------------------------------- */
 .info-product {
-  padding: 109px 53px;
+  padding: 0 53px;
   padding-right: 41px;
 }
 
