@@ -21,8 +21,13 @@ hr {
   flex-direction: column;
 }
 
+.content {
+  background-color: var(--white);
+}
+
 /* MENU RESPONSIVO */
 .menu {
+  background-color: var(--white);
   position: relative;
   display: flex;
   align-items: center;
@@ -83,14 +88,12 @@ hr {
 .menu-list {
   background-color: var(--white);
   position: fixed;
-  /* padding: 23px; */
   padding: 23px 0;
   top: 0;
   list-style: none;
   left: 0;
   height: 100vh;
   z-index: 1000;
-  /* width: 67%; */
   width: 0;
   transition: 0.8s;
   overflow: hidden;
