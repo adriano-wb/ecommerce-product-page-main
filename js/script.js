@@ -40,7 +40,7 @@ window.onload = () => {
   const totalPriceProduct = document.getElementById("totalPrice");
 
   // Valor que será adicionado ao carrinho
-  let valorAdicionadoAoCarrinho = 1;
+  let valorAdicionadoAoCarrinho = 0;
 
   // Valor total calculado
   let valorTotalSomandoItem = 0;
