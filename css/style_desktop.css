@@ -507,8 +507,9 @@ hr {
 }
 
 .product-price__before {
+  color: var(--dark-grayish-blue);
+  font-weight: bold;
   display: inline-block;
-  color: var(--grayish-blue);
   font-size: 0.94rem;
   margin-top: 5px;
 }
