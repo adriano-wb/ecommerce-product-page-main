@@ -96,7 +96,7 @@ window.onload = () => {
   const linkAnimacaoOpacity = document.querySelectorAll(".menu-list-item__link");
 
   // Media query para atribuir efeitos apenas para Mobile
-  const mediaMobile = window.matchMedia("(min-width: 375px)").matches;
+  const mediaMobile = window.matchMedia("(min-width: 500px)").matches;
 
   /* -------------------------------------- FIM VARIÁVEIS ---------------------------------- */
 
