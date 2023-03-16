@@ -472,9 +472,10 @@ hr {
 
 .info-title__thin {
   color: var(--orange);
-  font-size: .84rem;
+  font-size: .82rem;
   text-transform: uppercase;
   line-height: 3.3;
+  letter-spacing: 0.09rem;
 }
 
 .info-product__text {
