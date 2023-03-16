@@ -2,7 +2,6 @@
 @import url("variables.css");
 
 body {
-  /* background: url('../design/mobile-design-basket-filled.jpg') top center / 100% auto no-repeat; */
   font-family: var(--font-kumbh);
 }
 
@@ -415,16 +414,16 @@ hr {
 
 .add-to-cart {
   display: flex;
-  margin-top: 40px;
+  margin-top: 23px;
   flex-direction: column;
 }
 
 .quantity {
-  background-color: var(--light-grayish-blue);
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 25px;
+  padding: 16px 25px;
 }
 
 .quantity__minus,
@@ -432,13 +431,23 @@ hr {
   background-color: transparent;
 }
 
+.quantity__minus {
+  margin-top: -1px;
+  margin-left: -1px;
+}
+
 .quantity__value {
   font-size: 0.88rem;
   font-weight: bold;
 }
 
+.quantity__plus {
+  margin-top: 5px;
+  margin-right: -1px;
+}
+
 .add-button {
-  margin-top: 35px;
+  margin-top: 20px;
   background-color: var(--orange);
   box-shadow: 1px 1px 4px #FF7D1A33, 1px 15px 18px #FF7D1A33;
   cursor: pointer;
@@ -469,10 +478,14 @@ hr {
   letter-spacing: -0.05rem;
 }
 
-
 .attribution {
+  background-color: var(--very-dark-blue);
+  color: var(--white);
+  padding: 5px;
   font-size: 11px;
   text-align: center;
   margin-top: 50px;
 }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a {
+  color: var(--orange);
+}
