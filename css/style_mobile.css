@@ -420,6 +420,7 @@ hr {
 }
 
 .quantity {
+  background: var(--light-grayish-blue);
   border-radius: 10px;
   display: flex;
   align-items: center;
