@@ -521,6 +521,7 @@ hr {
 }
 
 .quantity {
+  background-color: var(--light-grayish-blue);
   display: flex;
   align-items: center;
   flex-basis: 50%;
