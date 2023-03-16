@@ -220,7 +220,7 @@ hr {
   display: flex;
   align-items: center;
   padding: 21px 26px;
-  padding-right: 0;
+  padding-right: 9px;
 }
 
 .cart-dropdown-product__img {
@@ -231,6 +231,7 @@ hr {
 
 .cart-dropdown-caption {
   margin-left: 17px;
+  flex-basis: 100%;
 }
 
 .cart-dropdown-caption__title {
