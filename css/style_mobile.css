@@ -302,9 +302,7 @@ hr {
   border-radius: 50%;
   position: absolute;
   top: 50%;
-  padding: 7px 17px;
-  padding-left: 13px;
-  padding-top: 11px;
+  padding: 10px 16px;
   margin-top: -28px;
   user-select: none;
 }
@@ -315,8 +313,6 @@ hr {
 
 .btn-next {
   text-align: center;
-  padding-right: 14px;
-  padding-left: 16px;
   right: 14px;
 }
 
