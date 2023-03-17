@@ -408,9 +408,9 @@ hr {
   content: "";
   border-bottom: 1px solid var(--grayish-blue);
   position: absolute;
-  bottom: 6.8px;
+  bottom: 7.5px;
   width: 100%;
-  height: 13px;
+  height: 10px;
 }
 
 .add-to-cart {
