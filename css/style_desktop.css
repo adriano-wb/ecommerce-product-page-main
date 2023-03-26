@@ -153,6 +153,35 @@ hr {
   top: 96px;
   width: 311px;
   left: -143px;
+  opacity: 0;
+}
+
+.cart-dropdown-opacity-abrir {
+  animation: desvaneioAbrindo .3s linear forwards;
+}
+
+.cart-dropdown-opacity-fechar {
+  animation: desvaneioFechando .3s linear forwards;
+}
+
+@keyframes desvaneioAbrindo {
+  0% {opacity: 0}
+  100% {opacity: 100%}
+}
+
+@keyframes desvaneioFechando {
+  0% {opacity: 100%}
+  100% {opacity: 0}
+}
+
+@-webkit-keyframes desvaneioAbrindo {
+  0% {opacity: 0}
+  100% {opacity: 100%}
+}
+
+@-webkit-keyframes desvaneioFechando {
+  0% {opacity: 100%}
+  100% {opacity: 0}
 }
 
 .cart-dropdown-alterne {
@@ -507,9 +536,8 @@ hr {
 }
 
 .product-price__before {
-  color: var(--grayish-blue);
-  font-weight: bold;
   display: inline-block;
+  color: var(--grayish-blue);
   font-size: 0.94rem;
   margin-top: 5px;
 }
