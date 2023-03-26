@@ -2,7 +2,6 @@
 @import url("variables.css");
 
 body {
-  background-color: var(--white);
   font-family: var(--font-kumbh);
 }
 
@@ -186,11 +185,39 @@ hr {
   display: none;
   animation: alterneAltura .5s linear;
   position: absolute;
-  left: 6px;
+  left: 6.5px;
   height: 256px;
   top: 75px;
   width: 96.5%;
   z-index: 500;
+}
+
+.cart-dropdown-opacity-abrir {
+  animation: desvaneioAbrindo .3s linear forwards;
+}
+
+.cart-dropdown-opacity-fechar {
+  animation: desvaneioFechando .3s linear forwards;
+}
+
+@keyframes desvaneioAbrindo {
+  0% {opacity: 0}
+  100% {opacity: 100%}
+}
+
+@keyframes desvaneioFechando {
+  0% {opacity: 100%}
+  100% {opacity: 0}
+}
+
+@-webkit-keyframes desvaneioAbrindo {
+  0% {opacity: 0}
+  100% {opacity: 100%}
+}
+
+@-webkit-keyframes desvaneioFechando {
+  0% {opacity: 100%}
+  100% {opacity: 0}
 }
 
 .cart-dropdown-alterne {
@@ -410,7 +437,7 @@ hr {
   position: absolute;
   bottom: 7.5px;
   width: 100%;
-  height: 10px;
+  height: 13px;
 }
 
 .add-to-cart {
