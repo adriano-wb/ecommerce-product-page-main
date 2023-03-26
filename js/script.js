@@ -1,6 +1,9 @@
 window.onload = () => {
   /* -------------------------- VARIÁVEIS ------------------------------ */
 
+  /* Screen */
+  const contentCenter = document.querySelector(".box-conteudo-flex");
+
   /* -------------- Parte do cart dropdown e somas --------------------- */
   /* -------------- Parte do cart dropdown e somas --------------------- */
   /* -------------- Parte do cart dropdown e somas --------------------- */
@@ -20,6 +23,7 @@ window.onload = () => {
 
   // Conteúdo "carrinho" contendo produto
   const cartDropdownContainer = document.querySelector(".cart-dropdown");
+  let carrinhoAberto = true;
 
   // Produto no carrinho
   const cartProductContent = document.querySelectorAll(".cart-dropdown-product");
@@ -86,6 +90,9 @@ window.onload = () => {
 
   const anteriorSldBtnMobile = document.getElementById("prevSldMobile");
   const proximoSldBtnMobile = document.getElementById("nextSldMobile");
+  const slidesModalLength = slidesModalImg.length;
+  const slidesLength = slides.length;
+  const dotsLength = dotsModal.length;
 
 
   // Viriável menu principal botão
@@ -137,11 +144,11 @@ window.onload = () => {
   slideshowModal(slideIndexModal);
   function slideshowModal(n) {
 
-    for (let i = 0; i < slidesModalImg.length; i++) {
+    for (let i = 0; i < slidesModalLength; i++) {
       slidesModalImg[i].style.display = "none";
     }
 
-    for (let i = 0; i < dotsModal.length; i++) {
+    for (let i = 0; i < dotsLength; i++) {
       dotsModal[i].classList.remove("active");
     }
 
@@ -154,11 +161,12 @@ window.onload = () => {
   }
 
   function slideshow(n) {
-    for(let i = 0; i < slides.length; i++) {
+
+    for(let i = 0; i < slidesLength; i++) {
       slides[i].style.display = "none";
     }
 
-    for (let i = 0; i < dots.length; i++) {
+    for (let i = 0; i < dotsLength; i++) {
       dots[i].classList.remove("active");
     }
 
@@ -249,7 +257,14 @@ window.onload = () => {
     menu[0].classList.add("responsivo");
     fundoPretoMenu[0].style.display = "block";
 
-    setTimeout(opacityOn, 200);
+    async function menuLinkEfeito() {
+      let promiseMenu = new Promise((opacity) => {
+        opacity(setTimeout(opacityOn, 200));
+      })
+
+      await promiseMenu;
+    }
+    menuLinkEfeito();
 
     fundoPretoMenu[0].removeEventListener("animationend", finalizaAnimFundoPreto);
     fundoPretoMenu[0].style.animationName = "aberturaLenta";
@@ -258,7 +273,14 @@ window.onload = () => {
   function fecharMenuResponsivo() {
     menu[0].style.width = "0";
     menu[0].classList.remove("responsivo");
-    setTimeout(opacityOff, 700);
+
+    async function menuLinkEfeito() {
+      let promiseMenu = new Promise((opacity) => {
+        opacity(setTimeout(opacityOff, 700));
+      })
+
+      await promiseMenu;
+    }
 
     for (let i = 0; i < linkAnimacaoOpacity.length; i++) {
       linkAnimacaoOpacity[i].classList.add("menu-list-opacity-on");
@@ -322,7 +344,28 @@ window.onload = () => {
 
     /* Botão para ver carrinho de compras */
     botaoAbrirCartDropdown.addEventListener("click", () => {
-      cartDropdownContainer.classList.toggle("cart-dropdown-alterne");
+      function removerDrop() {
+        this.classList.remove("cart-dropdown-alterne");
+        if (document.removeEventListener)
+          this.removeEventListener("animationend", removerDrop);
+        else
+          this.detachEvent("onanimationend", removerDrop);
+      }
+
+      if (carrinhoAberto) {
+        carrinhoAberto = false;
+        cartDropdownContainer.classList.remove("cart-dropdown-opacity-fechar");
+        cartDropdownContainer.classList.add("cart-dropdown-opacity-abrir");
+        cartDropdownContainer.classList.add("cart-dropdown-alterne");
+      } else {
+        carrinhoAberto = true;
+        cartDropdownContainer.classList.remove("cart-dropdown-opacity-abrir");
+        cartDropdownContainer.classList.add("cart-dropdown-opacity-fechar");
+        if (document.addEventListener)
+          cartDropdownContainer.addEventListener("animationend", removerDrop);
+        else
+          cartDropdownContainer.attachEvent("onanimationend", removerDrop);
+      }
     });
 
     /* Botão decrementar quantidade de produtos no carrinho */
@@ -380,16 +423,16 @@ window.onload = () => {
     /* Eventos para slideshow e modal de galeria de imagens */
     /* Eventos para slideshow e modal de galeria de imagens */
     /* Eventos para slideshow e modal de galeria de imagens */
-    for (let i = 0; i < dots.length; i++) {
+    for (let i = 0; i < dotsLength; i++) {
       dots[i].addEventListener("click", () => currentSlide(i), false);
     }
 
-    for (let i = 0; i < dots.length; i++) {
+    for (let i = 0; i < dotsLength; i++) {
       dotsModal[i].addEventListener("click", () => currentSlideModal(i), false);
     }
 
     if (mediaMobile) {
-      for (let i = 0; i < slides.length; i++) {
+      for (let i = 0; i < slidesLength; i++) {
         slides[i].addEventListener("click", abrirModal);
         closeModal.addEventListener("click", fecharModal);
         bgDarkModal.addEventListener("click", fecharModal);
@@ -501,11 +544,11 @@ window.onload = () => {
     /* Eventos para slideshow e modal de galeria de imagens */
     /* Eventos para slideshow e modal de galeria de imagens */
     /* Eventos para slideshow e modal de galeria de imagens */
-    for (let i = 0; i < dots.length; i++) {
+    for (let i = 0; i < dotsLength; i++) {
       dots[i].addEventListener("click", () => currentSlide(i), false);
     }
 
-    for (let i = 0; i < dots.length; i++) {
+    for (let i = 0; i < dotsLength; i++) {
       dotsModal[i].addEventListener("click", () => currentSlideModal(i), false);
     }
 
