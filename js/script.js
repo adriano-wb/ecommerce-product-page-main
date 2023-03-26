@@ -111,9 +111,15 @@ window.onload = () => {
     containerCarregando.style.opacity = "0";
     containerCarregando.style.transition = ".8s";
 
-    containerCarregando.addEventListener("transitionend", () => {
-      containerCarregando.style.display = "none";
-    });
+    if (document.addEventListener) {
+      containerCarregando.addEventListener("transitionend", () => {
+        containerCarregando.style.display = "none";
+      });
+    } else {
+      containerCarregando.attachEvent("ontransitionend", () => {
+        containerCarregando.style.display = "none";
+      });
+    }
   }, 1200);
 
   function trabalharQuantiaAdicionadaAoCarrinho() {
