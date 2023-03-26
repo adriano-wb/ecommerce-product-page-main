@@ -380,8 +380,13 @@ hr {
 }
 
 .slide-modal {
-  margin: 73px auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   width: 473px;
+  height: 100vh;
+  margin-top: -25px;
 }
 
 .head-close-btn {
@@ -402,10 +407,6 @@ hr {
   left: 0;
   width: 100%;
   height: 100vh;
-}
-
-.slideshow-modal {
-  margin-top: 61px;
 }
 
 .slideshow-modal__img {
