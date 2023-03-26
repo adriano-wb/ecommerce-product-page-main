@@ -106,6 +106,15 @@ window.onload = () => {
   const mediaMobile = window.matchMedia("(min-width: 500px)").matches;
 
   /* -------------------------------------- FIM VARIÁVEIS ---------------------------------- */
+  setTimeout(() => {
+    const containerCarregando = document.getElementById("loadContainer");
+    containerCarregando.style.opacity = "0";
+    containerCarregando.style.transition = ".8s";
+
+    containerCarregando.addEventListener("transitionend", () => {
+      containerCarregando.style.display = "none";
+    });
+  }, 1200);
 
   function trabalharQuantiaAdicionadaAoCarrinho() {
     // Exibir preço total
