@@ -515,6 +515,6 @@ hr {
   text-align: center;
   margin-top: 50px;
 }
-.attribution a {
+.attribution__link {
   color: var(--orange);
 }
