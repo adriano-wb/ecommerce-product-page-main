@@ -516,5 +516,5 @@ hr {
   margin-top: 50px;
 }
 .attribution a {
-  color: var(--orange);
+  color: hsl(14, 44%, 36%);
 }
